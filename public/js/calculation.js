@@ -41,7 +41,7 @@ function updateDisplay() {
 }
 
 
-// this should be a very helpful comment
+// Greets the user with "good morning" or "good evening"
 getGreetingDependOnTime = function (myDate) {
     let timeBegin = '06:00';
     let timeEnd = '22:00';
