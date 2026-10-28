@@ -17,3 +17,22 @@ describe("celsiusToFahrenheit()", function(){
     })
 
 });
+
+describe("getGreetingDependOnTime()", function(){
+    
+     beforeEach(function () {
+
+    })
+    
+    // tests YYYY-MM-DDTHH:mm:ss.sssZ
+    it('should greet with "Guten Morgen"', function () {
+        expect(apiTemperature.getGreetingDependOnTime('2025-01-01T08:00:00.000Z')).to.equal("Guten Morgen");
+    })
+    it('should greet with "Guten Abend"', function () {
+        expect(apiTemperature.getGreetingDependOnTime('2025-01-01T20:00:00.000Z')).to.equal("Guten Abend");
+    })
+    it('should greet with "Guten Tag"', function () {
+        expect(apiTemperature.getGreetingDependOnTime('2025-01-01T15:00:00.000Z')).to.equal("Guten Tag");
+    })
+
+});
